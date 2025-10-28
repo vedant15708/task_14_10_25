@@ -5,9 +5,14 @@ import 'core/config/app_route.dart';
 import 'core/utils/app_constant.dart';
 import 'core/utils/colors.dart';
 
-void main() {
+void main() async{
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await Future.delayed(const Duration(milliseconds: 300));
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+    FlutterNativeSplash.remove();
+  });
+
   runApp(const MyApp());
 }
 
@@ -39,13 +44,19 @@ class _MyAppState extends State<MyApp> {
       builder: (context, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
+          useInheritedMediaQuery: true,
           title: AppConstants.appName,
           theme: ThemeData(
             primaryColor: AppColors.primary,
-           // scaffoldBackgroundColor: AppColors.white,
           ),
           initialRoute: AppRoutes.onboarding,
           routes: AppRoutes.routes,
+          builder: (context, widget) {
+            return MediaQuery(
+              data: MediaQuery.of(context).copyWith(textScaleFactor: 1.0),
+              child: widget!,
+            );
+          }
         );
       },
     );
