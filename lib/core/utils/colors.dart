@@ -6,4 +6,6 @@ class AppColors {
   static const Color lightGrey = Color(0xFFD0D0D0);
   static const Color white = Colors.white;
   static const Color black = Colors.black;
+  static const Color textFieldBackground = Color(0xFFF3F4F6);
+  static const Color loginbutton = Color(0xFF44B12C);
 }

@@ -1,5 +1,5 @@
 class AppConstants {
-  static const String logo = 'assets/images/logo.png';
+  static const String logo = 'assets/images/logo.jpg';
   static const String appName='huge basket';
   static  String onboard1 = 'assets/images/onboard1.png';
   static  String onboard2 = 'assets/images/onboard2.png';
