@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'colors.dart';
 
-class AppTextStyles {
+class     AppTextStyles {
   static const String _fontFamily = 'MyriadPro';
   static const String _fontFamilyCondensed = 'MyriadProCond';
 
@@ -41,5 +41,13 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     fontSize: 22.sp,
     color: AppColors.primary,
+  );
+
+
+  static final TextStyle verificationcodedescription = TextStyle(
+    fontFamily: _fontFamily,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.black,
   );
 }

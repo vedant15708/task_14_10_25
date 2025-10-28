@@ -10,4 +10,5 @@ class AppConstants {
   static const String onboardTitle3 = 'Chat with Supplier';
 
   static const String onboardSubTitle = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.';
+  static const String verificationSubTitle = 'Verification code has been sent on your registered mobile number. Enter Verification code here.';
 }
